@@ -5,13 +5,14 @@ import Header from "@/components/ui/Header";
 
 interface PageLayoutProps {
     children: ReactNode;
+    title: string;
 }
 
-const PageLayout: React.FC<PageLayoutProps> = ({ children }) => {
+const PageLayout: React.FC<PageLayoutProps> = ({ children, title }) => {
     return (
         <>
             <Header />
-            <BreadCrumb title="Product" />
+            <BreadCrumb title={title} />
             <div className="min-h-[500px] container mx-auto my-24">
                 {children}
             </div>

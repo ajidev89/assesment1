@@ -6,7 +6,7 @@ import Head from "next/head";
 
 export default function Home() {
     return (
-        <PageLayout>
+        <PageLayout title="Products">
             <Head>
                 <title>Home - My E-commerce Store</title>
             </Head>

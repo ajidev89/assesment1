@@ -9,7 +9,7 @@ const ProductPage = () => {
     const { id } = router.query;
 
     if (!id) {
-        return <PageLayout>Loading...</PageLayout>;
+        return <PageLayout title="Product">Loading...</PageLayout>;
     }
 
     const product = products.find(
@@ -17,11 +17,11 @@ const ProductPage = () => {
     );
 
     if (!product) {
-        return <PageLayout>Product not found</PageLayout>;
+        return <PageLayout title="Product">Product not found</PageLayout>;
     }
 
     return (
-        <PageLayout>
+        <PageLayout title={product.name}>
             <Head>
                 <title>{product.name} - My E-commerce Store</title>
             </Head>
